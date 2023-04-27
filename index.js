@@ -20,7 +20,7 @@ const list = [];
         const links = await page.$$eval(".ui-search-result__image > a", el => el.map(link => link.href));
 
         for (link of links) {
-            if (counter === 4) continue;
+            if (counter === 10) continue;
             console.log('Mercado livre pagina', counter)
             await page.goto(link);
             await page.waitForSelector(".ui-pdp-title")
